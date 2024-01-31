@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adicionado */
+}
+
+html,body{
+    width: 100%;
+}
+
+body{
+    background-image: url(/Imagens/bakcground\ img.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.marca {
+    position: relative; /* Adicione position relative para que as posições absolutas funcionem corretamente */
+}
+
+.marca img {
+    position: absolute; /* Defina a posição como absoluta */
+    top: -238px;
+    left: 37%;
+    width: 25%;
+}
+
+
+.arceus img {
+    top: 10px;
+    left: 20px;
+}
+
+.otpokemon {
+    position: absolute;
+    top: 100px;
+    left: 1145px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(rgb(194, 194, 194), rgb(255, 255, 255) );
+    content: "";
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.hd-card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+.pagina{
+    width: 755px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pagina h2{
+    font-size: 25px;
+}
+
+.pagina h3{
+    color: rgb(23, 31, 141);
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.destaques {
+    margin: 20px 0px    ;
+}
+
+a {
+    position: relative;
+    color: white;
+    font-size: 12px;
+}
+
+
+a:hover::after, /* Corrigido */
+a:focus::after { /* Corrigido */
+    opacity: 1;
+    transform: translateY(1px);
+}
+
+a::after {
+    content: "Level 100";
+    position: absolute;
+    background-color: rgb(195, 195, 195); /* Corrigido */
+    top: 10px;
+    font-size: 18px;
+    left: 30px;
+    width: 100px;
+    color: rgb(0, 0, 0);
+    font-weight: 100px;
+    opacity: 0;
+    transition: opacity 500ms, transform 500ms;
+    text-align: center;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100.5%);
+    }
+}
+
+
+
+.logo {
+    overflow: hidden;
+    padding: 10px 0;
+    background: white;
+    white-space: nowrap;
+}
+
+.logo::before {
+    position: absolute;
+    top: 260px;
+    left: 1055px;
+    width: 78px;
+    height: 200px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255) );
+    content: "";
+    z-index: 2;
+}
+
+
+
+.logo:hover .logo-slide {
+    animation-play-state: paused;
+}
+
+.logo-slide {
+    display: inline-block;
+    animation: 4s slide infinite linear;
+    white-space: normal; /* Adicionado */
+    padding: 10px 0px;
+}
+
+.logo-slide img{
+    height: 100px;
+    margin: 0 20px; /*Alterado para menos margem */
+    cursor: pointer;
+}
+
+.logo-slide img:hover {
+    border-radius: 30px;
+    background-color: #c3bcbc77;
+}
+
+
+.logo-slide p {
+    margin-top: 10px; /* Adicionado */
+    font-size: 14px; /* Adicionado */
+}
+
+.pagina2{
+    margin: 15px 0px;
+}
+
+.product-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .product-info {
+    padding: 10px;
+  }
+  
+  .product-info h2 {
+    margin-top: 0;
+  }
+  
+  .product-info p {
+    margin: 5px 0;
+  }
+  
+  .product-info button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product-info button:hover {
+    background-color: #0056b3;
+  }
+  
+  .ratings {
+    font-style: italic;
+  }
+
+  .product-card {
+    display: inline-block;
+  } 
+
+  .product-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+  }
+
+
+  .hd-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.611);
+  }
+
+  .hd-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+  }
+
+  .hd-card img {
+    width: 40%;
+    height: auto;
+    margin-left: 50px;
+    
+}
+
+.hd-card button {
+    margin-left: 25px;
+}
+
+.hd-card p {
+    margin-left: 27px;
+}
+
+.capsula {
+    background-color: white;
+}
+
+img {
+    position: relative;
+    color: #0056b3;
+    font-size: 30px;
+}
+
+img::after {
+    content: "Hd DInheiro";
+    position: absolute;
+    background-color: black;
+    top: 30px;
+    left: 30px;
+    width: 100px;
+    height: 40px;
+    color: aquamarine;
+    opacity: 0;
+    transition: opacity 500ms, transform 500ms;
+
+}
+
+img:is(:hover, :focus)::after {
+    opacity: 1;
+    transform: translateY(70px);
+}
